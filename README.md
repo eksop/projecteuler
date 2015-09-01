@@ -1,4 +1,4 @@
 projecteuler
 ============
 
-My collection of C programs to solve problems on Project Euler
+My collection of programs to solve problems on Project Euler
