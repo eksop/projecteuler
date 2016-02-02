@@ -153,32 +153,3 @@ console.log(sum);
 
 //var num = process.argv[2];
 //console.log(check_all_2(num));
-
-/*
-
-if [[ "$age_in_seconds" -ge "$max_age" ]]; then kill -s 9 "$pid"; fi
-
-max_age=$((4 * 60 * 60)); pgrep -f '/usr/bin/php.*--task=.*' | while read process_pid; do age_in_seconds=$(echo "$(date +%s) - $(stat -c %X /proc/$process_pid)" | bc); if [[ "$age_in_seconds" -ge "$max_age" ]]; then kill -9 "$process_pid"; fi; done;
-
-max_age=$((60 * 60)); pgrep -f '/usr/bin/php.*--task=.*' | while read process_pid; do age_in_seconds=$(echo "$(date +%s) - $(stat -c %X /proc/$process_pid)" | bc); if [[ "$age_in_seconds" -ge "$max_age" ]]; then echo "$process_pid"; fi; done;
-
-
-max_age=$((4 * 60 * 60)); pgrep -f 'php.*--task=' | while read process_pid; do age_in_seconds=$(echo "$(date +%s) - $(stat -c %X /proc/$process_pid)" | bc); if [[ "$age_in_seconds" -ge "$max_age" ]]; then echo "$process_pid"; fi; done > /dev/null 2>&1
-
-
-
-#!/bin/bash
-
-max_age=$((4 * 60 * 60))
-
-pgrep -f 'php.*--task=' | while read process_pid
-do
-    age_in_seconds=$(echo "$(date +%s) - $(stat -c %X /proc/$process_pid)" | bc)
-
-    if [[ "$age_in_seconds" -ge "$max_age" ]]
-    then
-        kill -9 "$process_pid"
-    fi
-done
-
-*/
